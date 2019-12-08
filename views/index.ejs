@@ -3,24 +3,74 @@
     <head>
       <title>Come To Colorado!</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-      <link rel="stylesheet" href="views/COHP.css">
+      <link rel="stylesheet" href="COHP.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
     </head>
       <body>
 
-        <div class="bg">
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="flatiron_bg.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="maxresdefault.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="pearlstreet01.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="pearl.jpg" style="width:115%">
+          </div>
+        </div>
+
           <div class="container">
             <div class="jumbotron centered">
               <div class="container">
                 <h1 class="text-center" style="font-size:800%">Welcome to Colorado!</h1>
                 <hr class="my-4">
                 <p class="text-center" style="font-size:190%">We're here to help you plan your days in Boulder like a native would!</p>
-                <a class="btn-ghost btn-white btn-align" style="color:black; text-decoration:none;" href="preferences">
+                <a class="btn-ghost btn-white btn-align" style="color:black; text-decoration:none;"href="preference.html">
                   Get Started
                 </a>
               </div>
             </div>
           </div>
-        </div>
+          <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class='dot'></span>
+          </div>
+
+          <script>
+          var slideIndex = 0;
+          showSlides();
+
+          function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+          }
+          </script>
 
       </body>
   </html>
