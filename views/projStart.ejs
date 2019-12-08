@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel = "stylesheet" type= "text/css" href = "style.css">
+
+<title>Tour Plan</title>
+<meta charset="UTF-8">
+</head>
+<body>
+<br>
+<br>
+
+<h1>Make It Full-Screen! Much more STEEZ</h1>
+
+<div class = "container container-fluid">
+    <div id = "map"></div>
+</div>
+
+<h1>Give it a minute to load, we are working with the free API</h1>
+
+<!-- <div class = "container container-fluid">
+    <h1> Restaurants </h1>
+
+    <button class = "accordion"> The Sink</button>
+    <div class = "panel">
+        <img src = "sinkphoto1.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200" >
+        <img src = "sinkphoto2.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200" >
+        <img src = "sinkphoto3.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200" >
+        <p> Since 1923, The Sink has served the best pizza and the best burger in Boulder, but we’re more than just our menu. Located near CU on The Hill, we are known for our iconic art, our funky vibe, and as a Boulder must-see. It’s a piece of Old Boulder you won’t want to miss. </p>
+        <ul>
+            <li>asd</li>
+            <li>Address: 1165 13th St, Boulder, CO 80302 </li>
+            <li>Hours: 11am-10pm </li>
+        </ul>
+        <a target = "_blank" href = "https://www.google.com/search?rlz=1C1CHBF_enUS869US869&sxsrf=ACYBGNTcsgh2Ynl6I9h80MUHJa0eSUTx2Q%3A1571787144836&ei=iJGvXaPVMo_D0PEP9ZCf2Aw&q=the+sink+hours&oq=the+sink+hours&gs_l=psy-ab.3..0j0i22i30l9.1975.2668..2801...0.2..0.122.554.5j1....2..0....1..gws-wiz.......0i71j35i39j0i20i263j0i228j0i10j0i22i10i30.wgnyMPjQlDc&ved=0ahUKEwijubizg7HlAhWPITQIHXXIB8sQ4dUDCAs&uact=5#lrd=0x876bec308cb735e5:0x2135acc02ab02791,1,,,"><button class = "btn btn-primary">Click For Reviews</button></a>
+        <a target = "_blank" href = "https://www.thesink.com"><button  class = "btn btn-primary">Click To Visit Their Website</button></a>
+
+    </div>
+
+    <button class = "accordion">Cosmo's Pizza</button>
+    <div class = "panel">
+        <img src = "cosmophoto1.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "cosmophoto2.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "cosmophoto3.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <p> Cosmos Pizza serves handtossed pizza in Boulder, Fort Collins and Denver. Late night pizza has never tasted so good. </p>
+        <ul>
+            <li>Price: $ </li>
+            <li>Addresses for the three locations in Boulder:
+                <ul>
+                    <li>659 30th St</li>
+                    <li>1325 Broadway #108</li>
+                    <li>3117 28th St</li>
+                </ul>
+            <li>Hours: 11AM-2:30AM Every Day</li>
+        </ul>
+        <a target = "_blank" href = "https://www.google.com/search?rlz=1C1CHBF_enUS869US869&sxsrf=ACYBGNRBzfTLW-s6MXCkBpW3nhd46Y5Bbw:1571787976596&q=cosmos%20pizza%20boulder&sa=X&ved=2ahUKEwjk54bAhrHlAhWHHDQIHYSSC0EQvS4wAHoECAoQIQ&biw=768&bih=705&dpr=2.5&npsic=0&rflfq=1&rlha=0&rllag=40014949,-105265234,2040&tbm=lcl&rldimm=12391833635735398518&lqi=ChRjb3Ntb3MgcGl6emEgYm91bGRlciIDiAEBWg4KDGNvc21vcyBwaXp6YQ&rldoc=1&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e3!2m1!1e16!3sIAE,lf:1,lf_ui:4&rlst=f#lrd=0x876bedba21fffdcb:0xabf8a30975bee876,1,,,&rlfi=hd:;si:12391833635735398518,l,ChRjb3Ntb3MgcGl6emEgYm91bGRlciIDiAEBWg4KDGNvc21vcyBwaXp6YQ;mv:[[40.032995899999996,-105.2523544],[39.996904,-105.278114]]"><button  class = "btn btn-primary">Click For Reviews</button></a>
+        <a target = "_blank" href = "https://www.google.com/search?rlz=1C1CHBF_enUS869US869&sxsrf=ACYBGNRBzfTLW-s6MXCkBpW3nhd46Y5Bbw:1571787976596&q=cosmos%20pizza%20boulder&sa=X&ved=2ahUKEwjk54bAhrHlAhWHHDQIHYSSC0EQvS4wAHoECAoQIQ&biw=768&bih=705&dpr=2.5&npsic=0&rflfq=1&rlha=0&rllag=40014949,-105265234,2040&tbm=lcl&rldimm=12391833635735398518&lqi=ChRjb3Ntb3MgcGl6emEgYm91bGRlciIDiAEBWg4KDGNvc21vcyBwaXp6YQ&rldoc=1&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e3!2m1!1e16!3sIAE,lf:1,lf_ui:4&rlst=f#lrd=0x876bec306c81985d:0x8bd885c1976cbca1,1,,,&rlfi=hd:;si:10076951232757152929,l,ChRjb3Ntb3MgcGl6emEgYm91bGRlciIDiAEBWg4KDGNvc21vcyBwaXp6YQ;mv:[[40.032995899999996,-105.2523544],[39.996904,-105.278114]]"><button  class = "btn btn-primary">Click For Reviews</button></a>
+        <a target = "_blank" href = "https://www.google.com/search?rlz=1C1CHBF_enUS869US869&sxsrf=ACYBGNRBzfTLW-s6MXCkBpW3nhd46Y5Bbw:1571787976596&q=cosmos%20pizza%20boulder&sa=X&ved=2ahUKEwjk54bAhrHlAhWHHDQIHYSSC0EQvS4wAHoECAoQIQ&biw=768&bih=705&dpr=2.5&npsic=0&rflfq=1&rlha=0&rllag=40014949,-105265234,2040&tbm=lcl&rldimm=12391833635735398518&lqi=ChRjb3Ntb3MgcGl6emEgYm91bGRlciIDiAEBWg4KDGNvc21vcyBwaXp6YQ&rldoc=1&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e3!2m1!1e16!3sIAE,lf:1,lf_ui:4&rlst=f#lrd=0x876bee7ba746dc29:0xef75076f5db5e36e,1,,,&rldoc=1&rlfi=hd:;si:17254705722234889070,l,ChRjb3Ntb3MgcGl6emEgYm91bGRlciIDiAEBWg4KDGNvc21vcyBwaXp6YQ;mv:[[40.032995899999996,-105.2523544],[39.996904,-105.278114]]"><button  class = "btn btn-primary">Click For Reviews</button></a>
+        <a target = "_blank" href = "https://cosmospizza.com"><button  class = "btn btn-primary">Click To Visit Their Website</button></a>
+    </div>
+
+    <button class = "accordion">Wapos</button>
+    <div class = "panel">
+        <img src = "waposphoto1.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "waposphoto2.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "waposphoto3.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <p> This hole in the wall restaurant in North Boulder is the perfect getaway from the chaotic city life. This is the spot if you want a break from Pearl Street </p>
+        <ul>
+            <li>Price: $$-$$$ </li>
+            <li>Address: 4929 Broadway, Boulder, CO 80304</li>
+            <li>Hours: 11:45AM-8:30PM</li>
+            <li>Rating: 4.3 Stars </li>
+            <li>Happy Hours: Tues-Sunday 8-9PM</li>
+        </ul>
+        <a target = "_blank" href = "https://www.google.com/search?q=wapos&rlz=1C1CHBF_enUS869US869&oq=wapos&aqs=chrome..69i57j0l5.1231j1j9&sourceid=chrome&ie=UTF-8#lrd=0x876bef1c194e7c27:0xbf337e5f974dff64,1,,,"><button  class = "btn btn-primary">Click For Reviews</button></a>
+        <a target = "_blank" href = "https://waposboulder.com"><button  class = "btn btn-primary">Click To Visit Their Website</button></a>
+    </div>
+
+    <button class = "accordion">South Mouth Wings</button>
+    <div class = "panel">
+        <img src = "southmouthphoto2.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "southmouthphoto1.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "southmouthphoto3.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <p> Get the grizzlies golden honey sauce. You are welcome. This is a great late night spot for gluten-free eaters</p>
+        <ul>
+            <li>Price: $ </li>
+            <li>Address: 1650 Broadway ste a, Boulder, CO 80302</li>
+            <li>Hours: 11AM-12AM (Sun-Tues) 10:15AM-12AM (Wed) 11AM-2AM (Thurs-Sat)</li>
+        </ul>
+        <a target = "_blank" href = "https://www.google.com/search?q=south+mouth&rlz=1C1CHBF_enUS869US869&oq=south+mouth+&aqs=chrome..69i57j0l2j35i39j0l2.2013j0j9&sourceid=chrome&ie=UTF-8#lrd=0x876bec2582678fb5:0x36c81e4ecf50ec2a,1,,,"><button  class = "btn btn-primary">Click For Reviews</button></a>
+        <a target = "_blank" href = "https://www.southmouthwings.com"><button  class = "btn btn-primary">Click To Visit Their Website</button></a>
+
+    </div>
+
+    <button class = "accordion"> Tiffins Indian Cafe </button>
+    <div class = "panel">
+        <img src = "tiffinsphoto1.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "tiffinsphoto2.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "tiffinsphoto3.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <p> Right Here will be a description of the place within the panel </p>
+        <ul>
+            <li>Price: $</li>
+            <li>Address: 2416 Arapahoe Ave, Boulder, CO 80302 </li>
+            <li>Hours: 11AM-2:30PM, 4-10PM (Tues-Thurs) 11AM-2:30, 4-9PM(Sunday) Closed (Monday) </li>
+        </ul>
+        <a target = "_blank" href = "https://www.google.com/search?q=tiffins+boulder+co&source=lmns&bih=753&biw=767&rlz=1C1CHBF_enUS869US869&hl=en&ved=2ahUKEwj_-Z2OtLHlAhUNNa0KHf_5CZgQ_AUoAHoECAEQAA#lrd=0x876bedd268035df7:0x141a6150ef86e5d8,1,,,"><button  class = "btn btn-primary">Click For Reviews</button></a>
+        <a target = "_blank" href = "https://www.tiffinsindiacafe.com"><button  class = "btn btn-primary">Click To Visit Their Website</button></a>
+
+    </div>
+
+    <button class = "accordion"> Five Spice Chinese Food </button>
+    <div class = "panel">
+        <img src = "fivespicephoto1.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "fivespicephoto2.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "fivespicephoto3.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <p> Modest restaurant preparing an extensive menu of familiar & traditional Chinese dishes. </p>
+        <ul>
+            <li>Price: $$ </li>
+            <li>Address: 3325 28th St #5, Boulder, CO 80301 </li>
+            <li>Hours:  11AM-9:30PM (Tues-Sun)
+                        Closed (Monday) </li>
+        </ul>
+        <a target = "_blank" href = "https://www.google.com/search?q=five+spice+boulder&rlz=1C1CHBF_enUS869US869&oq=five&aqs=chrome.0.69i59l3j69i57j0l2.1360j0j9&sourceid=chrome&ie=UTF-8#lrd=0x876bee649a051841:0x203265d3205dac34,1,,,"><button  class = "btn btn-primary">Click For Reviews</button></a>
+        <a target = "_blank" href = "https://wwww.fivespicecuisine.com"><button  class = "btn btn-primary">Click To Visit Their Website</button></a>
+
+    </div>
+
+    <button class = "accordion"> Boulder Pho </button>
+    <div class = "panel">
+        <img src = "boulderphophoto1.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "boulderphophoto2.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "boulderphophoto3.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <p> Right Here will be a description of the place within the panel </p>
+        <ul>
+            <li>Price: $ </li>
+            <li>Address: 2855 28th St, Boulder, CO 80301 </li>
+            <li>Hours: 11AM-9PM EVERY DAY
+        </ul>
+        <a target = "_blank" href = "https://www.google.com/search?q=boulder+pho&rlz=1C1CHBF_enUS869US869&oq=boulder+pho&aqs=chrome..69i57j69i60l5.946j0j9&sourceid=chrome&ie=UTF-8#lrd=0x876bee5db0d24e3b:0xe6fae1d42e794413,1,,,"><button  class = "btn btn-primary">Click For Reviews</button></a>
+        <a target = "_blank" href = "https://menupages.com/boulder-pho/2855-28th-street-boulder"><button  class = "btn btn-primary">Click To Visit Their Website</button></a>
+    </div>
+</div>
+
+<div class = "container container-fluid">
+    <h1> Concert Venues </h1>
+
+    <button class = "accordion"> Red Rocks Amphitheatre </button>
+    <div class = "panel">
+        <img src = "redrocksphoto1.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "redrocksphoto2.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "redrocksphoto3.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <p> Trips are made to Colorado just to experience this breathtaking venue. You will surely meet incredible people and have a wonderful night, no matter what genre you prefer. (EDM is supreme)</p>
+        <ul>
+            <li>Price: Box office tickets are around $50, but tickets can go into the hundreds. (The memorable experience is worth it)</li>
+            <li>Address: 18300 W Alameda Pkwy, Morrison, CO 80465 </li>
+            <li>Rating: THE BEST </li>
+            <li>Capacity: ~10,000</li>
+        </ul>
+        <a target = "_blank" href = "https://www.google.com/search?q=red+rocks+amphitheatre&rlz=1C1CHBF_enUS869US869&oq=red+rocks+am&aqs=chrome.0.0l5j69i60.2100j1j9&sourceid=chrome&ie=UTF-8#lrd=0x876b82da0e6cc8d7:0x7c83e707392cd6ad,1,,,"><button  class = "btn btn-primary">Click For Reviews</button></a>
+        <a target = "_blank" href = https://www.redrocksonline.com/concerts-events><button  class = "btn btn-primary">Click For Events</button></a>
+
+    </div>
+
+    <button class = "accordion">Fox Theatre</button>
+    <div class = "panel">
+        <img src = "foxphoto1.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "foxphoto2.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "foxphoto3.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <p> The Fox Theatre normally has a blend of local artists and bigger names as headliners. All genres of music are played here, but for you headbangers, the pit can get pretty crazy. The venue is tucked away on The Hill. You can grab a bite to eat from Cheba Hut and then come support local artists. </p>
+        <ul>
+            <li>Price: Tickets are usually around $20. This is a very affordable venue.</li>
+            <li>Address: 1135 13th St, Boulder, CO 80302 </li>
+            <li>Capacity: 500 </li>
+        </ul>
+            <a target = "_blank" href = "https://www.google.com/search?rlz=1C1CHBF_enUS869US869&sxsrf=ACYBGNQX8A8g9oJ0lVFPtklzx7Gy9gBwtg:1571801440314&q=fox+theatre+(boulder,+colorado)+events&stick=H4sIAAAAAAAAAOPgEOLUz9U3yDBPMjZXQjC1VLOTrfRz8pMTSzLz8-AMq9KC5PzczLx0hdSy1LyS4kWsamn5FQolGamJJUWpChpJ-aU5KalFOgrJ-Tn5RYkp-ZpQhTtYGQF9A8KCawAAAA&sa=X&ved=2ahUKEwiUk4fUuLHlAhXCi54KHSh4AwcQMTAhegQIFxAK&biw=767&bih=704#lrd=0x876bec30ea33739b:0x12cc08dc7218b570,1,,,"><button  class = "btn btn-primary">Click For Reviews</button></a>
+            <a target = "_blank" href = "https://www.foxtheatre.com"><button  class = "btn btn-primary">Click For Events</button></a>
+
+    </div>
+
+    <button class = "accordion">The Black Box</button>
+    <div class = "panel">
+        <img src = "blackboxphoto1.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "blackboxphoto2.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "blackboxphoto3.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <p> Low-lit, high-energy DJ dance club with a powerful sound system, full bar & a smoking patio. The dual-room venue is fully equipped with powerful, state-of-the-art Basscouch Sound. A haven for artists, audiophiles, and partygoers alike. </p>
+        <ul>
+            <li>Price: $ </li>
+            <li>Address: 314 E 13th Ave, Denver, CO 80203</li>
+        </ul>
+        <a target = "_blank" href = "https://www.google.com/search?q=the+black+box+denver&source=lmns&bih=753&biw=767&rlz=1C1CHBF_enUS869US869&hl=en&ved=2ahUKEwjQo6ShzrHlAhVFUawKHW5_DrMQ_AUoAHoECAEQAA#lrd=0x876c7ed504c83409:0x9c843510c652b92b,1,,,"><button  class = "btn btn-primary">Click For Reviews</button></a>
+        <a target = "_blank" href = "https://blackboxdenver.co/home"><button class = "btn btn-primary">Click For Events</button></a>
+
+    </div>
+
+    <button class = "accordion">1st Bank Center</button>
+    <div class = "panel">
+        <img src = "1stbankphoto1.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "1stbankphoto2.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "1stbankphoto3.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <p> BUY FLOOR TICKETS. enough said. </p>
+        <ul>
+            <li>Address: 11450 Broomfield Ln, Broomfield, CO 80021 </li>
+            <li>Capacity: 6,500 </li>
+        </ul>
+        <a target = "_blank" href = "https://www.google.com/search?q=1st+bank+center&rlz=1C1CHBF_enUS869US869&oq=1st+bank&aqs=chrome.0.69i59l2j69i57j0j69i60l2.1173j0j7&sourceid=chrome&ie=UTF-8#lrd=0x876b8bc985f5b0e9:0x47293c252edbae17,1,,,"><button  class = "btn btn-primary">Click For Reviews</button></a>
+        <a target = "_blank" href = "https://www.1stbankcenter.com/events"><button class = "btn btn-primary">Click For Events</button></a>
+    </div>
+
+    <button class = "accordion">Cervantes</button>
+    <div class = "panel">
+        <img src = "cervantesphoto1.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "cervantesphoto2.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "cervantesphoto3.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <p> Indie music acts play in 2 independent yet connected & intimate concert halls. EMI COULD WRITE MORE HERE </p>
+        <ul>
+            <li>Address: 2637 Welton St, Denver, CO 80205 </li>
+        </ul>
+        <a target = "_blank" href = "https://www.google.com/search?q=cervantes+denver&source=lmns&bih=704&biw=767&rlz=1C1CHBF_enUS869US869&hl=en&ved=2ahUKEwj6toXZ0bHlAhVSs6wKHfCjD3MQ_AUoAHoECAEQAA#lrd=0x876c7923f5f67269:0x2c1769fe5454b5de,1,,,"><button  class = "btn btn-primary">Click For Reviews</button></a>
+        <a target = "_blank" href = "https://www.cervantesmasterpiece.com/calendar/"><button  class = "btn btn-primary">Click For Events</button></a>
+
+    </div>
+
+    <button class = "accordion">Mission Ballroom</button>
+    <div class = "panel">
+        <img src = "missionballroomphoto1.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "missionballroomphoto2.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "missionballroomphoto3.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <p> Current artists perform on a moving stage that can be adapted to varying audience sizes. </p>
+        <ul>
+            <li>Address: 4242 Wynkoop St, Denver, CO 80216 </li>
+        </ul>
+        <a target = "_blank" href = "https://www.google.com/search?q=mission+ballroom&rlz=1C1CHBF_enUS869US869&oq=mission+&aqs=chrome.0.0l2j69i57j0l3.1129j0j4&sourceid=chrome&ie=UTF-8#lrd=0x876c797fdd5f3937:0xb7d629fe1b3fe515,1,,,"><button  class = "btn btn-primary">Click For Reviews</button></a>
+        <a target = "_blank" href = "https://www.missionballroom.com/upcoming-events/"><button  class = "btn btn-primary">Click For Events</button></a>
+    </div>
+</div>
+
+<div class = "container container-fluid">
+    <h1>Outdoor Fun</h1>
+    <button class = "accordion">Dedisse Park</button>
+    <div class = "panel">
+            <img src = "dedissephoto1.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+            <img src = "dedissephoto2.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+            <img src = "dedissephoto3.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+            <p> Dedisse Park is a Denver Mountain Park located in Jefferson County, Colorado, USA. It was originally the scenic mountain ranch of 1860s pioneer Julius C. Dedisse; this 420 acres of land was purchased by the City & County of Denver in 1919. </p>
+            <ul>
+                <li>Address: 29200 Upper Bear Creek Rd, Evergreen, CO 80439</li>
+                <li>Area: 420 Acres</li>
+            </ul>
+            <a target = "_blank" href = "https://www.google.com/search?q=dedisse+park+colorado&source=lmns&bih=704&biw=767&rlz=1C1CHBF_enUS869US869&hl=en&ved=2ahUKEwjf-aL_6bflAhVS-KwKHST_Bd0Q_AUoAHoECAEQAA#lrd=0x876b9e6b4a6398b1:0x7010f900d89952e7,1,,,"><button class = "btn btn-primary">Click For Reviews</button></a>
+    </div>
+    <button class="accordion">Keystone Resort</button>
+    <div class= "panel">
+        <img src = "keystonephoto1.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "keystonephoto2.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <img src = "keystonephoto3.jfif" class = "img-rounded" alt = "this is a test" width = "200" height = "200">
+        <p>
+            This is a beautiful mountain that is open almost year round. Keystone is a wonderful, family friendly resort whether you are mountain biking, snowboarding, or just want to ride the gondola to the peak. Schoolmarm is one of the longest runs in the United States. It is mellow and a great place to learn how to ride!
+            If you don't want an adrenaline rush, you can take the gondola to the top of the mountain and enjoy breathtaking views and a nice drink at the peak.
+        </p>
+        <ul>
+            <li>Address: 100 Dercum Square, Keystone, CO 80435</li>
+            <li>Base Elevation: 9,280′ 0″</li>
+        </ul>
+        <a target = "_blank" href = "https://www.google.com/search?q=schoolmarm+keystone&rlz=1C1CHBF_enUS869US869&oq=schoolmarm+keystone&aqs=chrome..69i57.4612j0j7&sourceid=chrome&ie=UTF-8#lrd=0x876a5a02238af65b:0xf32799b7df0fabaf,1,,,"><button class = "btn btn-primary">Click For Reviews</button></a>
+        <a target = "_blank" href = "https://www.keystoneresort.com"><button class = "btn btn-primary">Click For Website</button></a>
+    </div>
+</div> -->
+
+<!-- <div class = "container">
+    <h1> Bars </h1>
+
+    <button class = "accordion">Bar1</button>
+    <div class = "panel">
+        <img src = "pic.jpg" class = "img-rounded" alt = "this is a test" width = "200" height = "200" style = transform:rotate(270deg)>
+        <p> Right Here will be a description of the place within the panel </p>
+        <ul>
+            <li>Price: </li>
+            <li>Address: </li>
+            <li>Hours:  </li>
+            <li>Rating: </li>
+            <li> <a href = "https://google.com">Click for a link To reviews</a></li>
+        </ul>
+    </div>
+
+    <button class = "accordion">MBar2</button>
+    <div class = "panel">
+        <img src = "pic.jpg" class = "img-rounded" alt = "this is a test" width = "200" height = "200" style = transform:rotate(270deg)>
+        <p> Right Here will be a description of the place within the panel </p>
+        <ul>
+            <li>Price: </li>
+            <li>Address: </li>
+            <li>Hours:  </li>
+            <li>Rating: </li>
+            <li> <a href = "https://google.com">Click for a link To reviews</a></li>
+        </ul>
+    </div>
+
+    <button class = "accordion">Movies3</button>
+    <div class = "panel">
+        <img src = "pic.jpg" class = "img-rounded" alt = "this is a test" width = "200" height = "200" style = transform:rotate(270deg)>
+        <p> Right Here will be a description of the place within the panel </p>
+        <ul>
+            <li>Price: </li>
+            <li>Address: </li>
+            <li>Hours:  </li>
+            <li>Rating: </li>
+            <li> <a href = "https://google.com">Click for a link To reviews</a></li>
+        </ul>
+    </div>
+
+    <button class = "accordion">Movies4</button>
+    <div class = "panel">
+        <img src = "pic.jpg" class = "img-rounded" alt = "this is a test" width = "200" height = "200" style = transform:rotate(270deg)>
+        <p> Right Here will be a description of the place within the panel </p>
+        <ul>
+            <li>Price: </li>
+            <li>Address: </li>
+            <li>Hours:  </li>
+            <li>Rating: </li>
+            <li> <a href = "https://google.com">Click for a link To reviews</a></li>
+        </ul>
+    </div>
+</div> !-->
+
+<br>
+<br>
+<br>
+
+<script src = "script.js"></script>
+<script src = "https://maps.googleapis.com/maps/api/js?callback=createMap&libraries=places&key=AIzaSyA8u6fLSIvuIwzH4dgqNjHP3NgVA30dGHQ" async defer></script>
+
+</body>
+</html>
